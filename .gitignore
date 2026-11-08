@@ -2,3 +2,5 @@ build/
 *.exe
 *.o
 src/main
+build-release/
+build-debug/
