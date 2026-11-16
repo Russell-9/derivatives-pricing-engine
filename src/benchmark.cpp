@@ -16,7 +16,7 @@ double average_price(int N, double S, double K, double T, double r, double  sigm
 
 int main() {
 
-    int  N = 10000;
+    int  N = 1000000;
     double S = 150.0;
     double K = 100.0;
     double T = 1.0;
