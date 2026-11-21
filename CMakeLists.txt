@@ -11,6 +11,14 @@ add_library(option src/Option.cpp)
 target_include_directories(option PUBLIC include)
 target_compile_options(option PRIVATE -Wall -Wextra)
 
+add_library(BinomialTree src/BinomialTree.cpp)
+target_include_directories(BinomialTree PUBLIC include)
+target_compile_options(BinomialTree PRIVATE -Wall -Wextra)
+
+add_library(Validation src/Validation.cpp)
+target_include_directories(Validation PUBLIC include)
+target_compile_options(Validation PRIVATE -Wall -Wextra)
+
 add_executable(pricer src/main.cpp)
 target_link_libraries(pricer PRIVATE option)
 

@@ -1,4 +1,5 @@
 #include "Option.hpp"
+#include "Validation.hpp"
 #include <cmath>
 #include <string>
 #include <stdexcept>
@@ -6,12 +7,7 @@
 namespace {
     constexpr double PI = 3.14159265358979323846;
     double normCDF(double x) { return 0.5 * (1.0 + std::erf(x / std::sqrt(2.0))); }
-    double normPDF(double x) { return std::exp(-0.5 * x * x) / std::sqrt(2.0 * PI); }
-    void requirePositiveFinite(double x, const char* name) {
-        if (!(std::isfinite(x) && x > 0.0)) {
-            throw std::invalid_argument(std::string(name) + " doit etre fini et strictement positif");
-        }
-    } 
+    double normPDF(double x) { return std::exp(-0.5 * x * x) / std::sqrt(2.0 * PI); }   
 }
 
 Option::Option(double S, double K, double T, double r, double sigma, OptionType type) : S_(S), K_(K), T_(T), r_(r), sigma_(sigma), 
