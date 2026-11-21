@@ -1,7 +1,6 @@
 #include "Option.hpp"
 #include "Validation.hpp"
 #include <cmath>
-#include <string>
 #include <stdexcept>
 
 namespace {
